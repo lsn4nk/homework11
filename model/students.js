@@ -9,8 +9,15 @@ class Students {
    }
 
    addStudent(student) {
-       this._DB.push(student);
-       console.log(this._DB)
+
+    if (this._DB.includes(student)) {
+        alert ('Student is in list');
+    } else {
+        this._DB.push(student);
+        console.log(this._DB);
+    }
+    
+       
    }
 
    removeStudent(student) {
