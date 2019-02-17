@@ -15,6 +15,11 @@ class StudentsController {
             this.model.addStudent(this.view.input.value);
             this.updateStudents();
         });
+
+        this.view.removeButton.addEventListener('click', () => {
+            this.model.removeStudent(this.view.input.value);
+            this.updateStudents();
+        });
     }
  
     showStudents() {
@@ -26,5 +31,4 @@ class StudentsController {
         this.view.updateList(this.model.DB);
     }
  }
- 
  
