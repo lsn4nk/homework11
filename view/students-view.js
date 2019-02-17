@@ -37,6 +37,7 @@ class StudentsView {
        const container = document.createElement('div');
        this.input = document.createElement('input');
        this.addButton = document.createElement('button');
+       this.removeButton = document.createElement('button');
 
        container.style.border = '1px solid black';
        container.style.borderRadius = '5px';
@@ -50,8 +51,13 @@ class StudentsView {
        this.addButton.style.height = '40px';
        this.addButton.style.margin = '5px';
 
+       this.removeButton.textContent = 'REMOVE STUDENT';
+       this.removeButton.style.height = '40px';
+       this.removeButton.style.margin = '5px';
+
        container.appendChild(this.input);
        container.appendChild(this.addButton);
+       container.appendChild(this.removeButton);
        (document.querySelector(context) || this.container).appendChild(container);
    }
 }
