@@ -14,12 +14,14 @@ class Students {
    }
 
    removeStudent(student) {
-       if (this._DB.includes(student)) {
-           this._DB.splice(this._DB.indexOf(student), 1);
-           return 'student has been removed'
-       } else {
-           throw new Error('Check student name');
-       }
+       try{
+        if (this._DB.includes(student)) {
+            this._DB.splice(this._DB.indexOf(student), 1);
+            return 'student has been removed'
+        } else {
+            throw new Error('Check student name');
+        }
+       } catch(e) { console.log(e); }
    }
 
    get DB() {
