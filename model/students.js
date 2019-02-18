@@ -8,6 +8,17 @@ class Students {
        return this._defaultData || [];
    }
 
+   changeStudent(student) {
+    if (this._DB.includes(student)) {
+        const name = this._DB.indexOf(student);
+        let askName = prompt("What name do you want?");
+        this._DB[name] = askName;
+     
+    } else {
+        alert('Not in a list');
+    }
+   }
+
    addStudent(student) {
 
     if (this._DB.includes(student)) {

@@ -38,6 +38,7 @@ class StudentsView {
        this.input = document.createElement('input');
        this.addButton = document.createElement('button');
        this.removeButton = document.createElement('button');
+       this.updateButton = document.createElement('button');
 
        container.style.border = '1px solid black';
        container.style.borderRadius = '5px';
@@ -55,9 +56,14 @@ class StudentsView {
        this.removeButton.style.height = '40px';
        this.removeButton.style.margin = '5px';
 
+       this.updateButton.textContent = 'UPDATE STUDENT';
+       this.updateButton.style.height = '40px';
+       this.updateButton.style.margin = '5px';
+
        container.appendChild(this.input);
        container.appendChild(this.addButton);
        container.appendChild(this.removeButton);
+       container.appendChild(this.updateButton);
        (document.querySelector(context) || this.container).appendChild(container);
    }
 }
